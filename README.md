@@ -1,1 +1,1 @@
-## Sample Project for Testing QUnit/PhantomJS and ANT
+## Sample project for testing JavaScript applications with QUnit, PhantomJS and ANT
