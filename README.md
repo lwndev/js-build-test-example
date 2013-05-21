@@ -1,1 +1,1 @@
-# Homepage App for Scott Muskin Website
+# Sample Project for Testing QUnit/PhantomJS and ANT
