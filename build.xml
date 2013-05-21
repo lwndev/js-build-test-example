@@ -1,0 +1,42 @@
+<project name="scott-muskin-homepage-app" default="dist" basedir=".">
+    <property name="src.dir" value="${basedir}/src" />
+    <property name="build.dir" value="${basedir}/build" />
+    <property name="test.dir" value="${basedir}/test" />
+    <property name="dist.dir" value="${basedir}/dist" />
+    <property name="webroot.dir" value="${src.dir}/www" />
+    <property name="js.lib.dir" value="${webroot.dir}/js/lib" />
+    <property name="test.suite" value="${webroot.dir}/test.html" />
+    <property name="test.results.dir" value="${basedir}/test-output" />
+
+
+    <target name="clean">
+        <delete dir="build"/>
+        <delete dir="dist"/>
+        <delete dir="test"/>
+        <delete dir="test-output"/>
+    </target>
+
+    <target name="build" depends="clean,test">
+        <mkdir dir="build"/>
+        <copy todir="${build.dir}">
+            <fileset dir="${src.dir}"/>
+        </copy>
+    </target>
+
+    <target name="test">
+        <mkdir dir="test-output"/>
+        <exec executable="phantomjs" failonerror="true" output="${test.results.dir}/results.txt" outputproperty="test.results">
+            <arg value="${js.lib.dir}/qunit/addons/phantomjs/runner.js"/>
+            <arg value="${test.suite}"/>
+        </exec>
+        <echo message="${test.results}" />
+    </target>
+
+    <target name="dist" depends="build">
+        <mkdir dir="dist"/>
+        <copy todir="${dist.dir}">
+            <fileset dir="${build.dir}"/>
+        </copy>
+    </target>
+
+</project>
