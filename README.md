@@ -21,5 +21,4 @@ An example project for testing JavaScript applications with QUnit, PhantomJS and
     $ git clone https://github.com/lwndev/js-build-test-example.git
     $ ant build
 
-
-
+This will run the tests and save them as a file called results.xml in the /test-output directory.
