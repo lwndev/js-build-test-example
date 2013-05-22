@@ -20,19 +20,19 @@
 			getElements();
 			setUp();
 			attachListeners();
-		}
+		};
 		
 		var getElements = function() {
 
-		}
+		};
 		
 		var	setUp = function() {
 
-		}
+		};
 		
 		var attachListeners = function() {
 
-		}
+		};
 		
 		/*
 		PUBLIC FUNCTIONS
@@ -40,7 +40,7 @@
 
 		_self.publicFunction = function(value){
 			return value;
-		}
+		};
 		
 		return init();
 		
