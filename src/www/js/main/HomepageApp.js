@@ -38,7 +38,7 @@
 		PUBLIC FUNCTIONS
 		*/
 
-		_self.testPublicFunction = function(value){
+		_self.publicFunction = function(value){
 			return value;
 		}
 		
