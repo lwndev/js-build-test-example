@@ -18,8 +18,8 @@ An example project for testing JavaScript applications with QUnit, PhantomJS and
 
 ## Usage
 
-  $ git clone https://github.com/lwndev/js-build-test-example.git
-  $ ant build
+    $ git clone https://github.com/lwndev/js-build-test-example.git
+    $ ant build
 
 
 
