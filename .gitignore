@@ -3,3 +3,5 @@
 /dist
 /test
 /test-output
+*.sublime-project
+*.sublime-workspace
