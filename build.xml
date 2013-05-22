@@ -1,4 +1,4 @@
-<project name="scott-muskin-homepage-app" default="dist" basedir=".">
+<project name="js-build-test-example" default="dist" basedir=".">
     <property name="src.dir" value="${basedir}/src" />
     <property name="build.dir" value="${basedir}/build" />
     <property name="test.dir" value="${basedir}/test" />
