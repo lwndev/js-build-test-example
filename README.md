@@ -15,7 +15,7 @@ An example project for testing JavaScript applications with QUnit, PhantomJS and
 
 ## Dependencies
 
-1. [PhantomJS](http://phantomjs.org/download.html)
+1. [PhantomJS](http://phantomjs.org/download.html) (Use version 1.8 or higher)
 2. [Apache ANT](http://ant.apache.org/bindownload.cgi)
 3. Java 1.6+
 
