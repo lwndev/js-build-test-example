@@ -25,11 +25,11 @@
 
     <target name="test">
         <mkdir dir="test-output"/>
-        <exec executable="phantomjs" failonerror="true" outputproperty="test.results">
+        <exec executable="phantomjs" failonerror="true" output="${test.results.dir}/results.xml" outputproperty="test.results">
             <arg value="${js.lib.dir}/phantomjs-runner/runner.js"/>
             <arg value="${test.suite}"/>
         </exec>
-        <echo message="${test.results}" file="${test.results.dir}/results.xml"/>
+        <echo message="${test.results}" />
     </target>
 
     <target name="dist" depends="build">
