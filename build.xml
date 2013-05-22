@@ -26,7 +26,7 @@
     <target name="test">
         <mkdir dir="test-output"/>
         <exec executable="phantomjs" failonerror="true" outputproperty="test.results">
-            <arg value="${js.lib.dir}/qunit/addons/phantomjs/runner.js"/>
+            <arg value="${js.lib.dir}/phantomjs-runner/runner.js"/>
             <arg value="${test.suite}"/>
         </exec>
         <echo message="${test.results}" file="${test.results.dir}/results.xml"/>
