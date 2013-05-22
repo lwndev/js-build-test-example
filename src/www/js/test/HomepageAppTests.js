@@ -1,9 +1,5 @@
 test( "testMe test!", function() {
-  ok( testMe("happy"),"testMe asserted successfully");
-  notEqual( testMe("unhappy"), true, "testMe failed as expected");
-});
-
-test( "testMe testers!", function() {
-  ok( testMe("happy"),"testMe asserted successfully");
-  notEqual( testMe("unhappy"), true, "testMe failed as expected");
+  ok( application.testPublicFunction("happy"),"Function returned a value");
+  equal( application.testPublicFunction("happy"),"happy", "Same value returned as passed to function");
+  notEqual( application.testPublicFunction("happy"),"happy", "A different value was not returned by the function");
 });

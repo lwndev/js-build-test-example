@@ -21,7 +21,7 @@
 
 	// arg[0]: scriptName, args[1...]: arguments
 	if (args.length < 2 || args.length > 3) {
-		console.error('Usage:\n  phantomjs runner.js [url-of-your-qunit-testsuite] [timeout-in-seconds]');
+		//console.error('Usage:\n  phantomjs runner.js [url-of-your-qunit-testsuite] [timeout-in-seconds]');
 		phantom.exit(1);
 	}
 
@@ -56,21 +56,21 @@
 
 	page.open(url, function(status) {
 		if (status !== 'success') {
-			console.error('Unable to access network: ' + status);
+			//console.error('Unable to access network: ' + status);
 			phantom.exit(1);
 		} else {
 			// Cannot do this verification with the 'DOMContentLoaded' handler because it
 			// will be too late to attach it if a page does not have any script tags.
 			var qunitMissing = page.evaluate(function() { return (typeof QUnit === 'undefined' || !QUnit); });
 			if (qunitMissing) {
-				console.error('The `QUnit` object is not present on this page.');
+				//console.error('The `QUnit` object is not present on this page.');
 				phantom.exit(1);
 			}
 
 			// Set a timeout on the test running, otherwise tests with async problems will hang forever
 			if (typeof timeout === 'number') {
 				setTimeout(function() {
-					console.error('The specified timeout of ' + timeout + ' seconds has expired. Aborting...');
+					//console.error('The specified timeout of ' + timeout + ' seconds has expired. Aborting...');
 					phantom.exit(1);
 				}, timeout * 1000);
 			}
@@ -114,10 +114,10 @@
 					name = result.module + ': ' + result.name;
 
 				if (result.failed) {
-					console.log('Test failed: ' + name);
+					//console.log('Test failed: ' + name);
 
 					for (i = 0, len = currentTestAssertions.length; i < len; i++) {
-						console.log('    ' + currentTestAssertions[i]);
+						//console.log('    ' + currentTestAssertions[i]);
 					}
 				}
 
